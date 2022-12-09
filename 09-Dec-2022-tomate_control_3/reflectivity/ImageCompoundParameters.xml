@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Image Compounding Config File-->
+<imageCompounding>
+	<Version>
+		<Parameter Name="XML File Version" Value="1.0" />
+	</Version>
+	<dBConversion>
+		<Parameter Name="gain"		 Value="0"	 />
+		<Parameter Name="contrast"	 Value="80"	 /> <!-- Default: 50 -->
+		<Parameter Name="exp"		 Value="1.5" />
+		<Parameter Name="autoGain"	 Value="0.6" />
+		<Parameter Name="noiseFloor" Value="10"	 />
+	</dBConversion>
+	<contourDetecion>		
+		<Parameter Name="angularStep"	Value="0.1"	/>
+		<Parameter Name="coefNumber"	Value="5"	/>
+		<Parameter Name="avgLines"		Value="20"	/> <!--Lineas a promediar a cada lado de la central-->
+		<Parameter Name="avgSamples"	Value="100" />
+		<Parameter Name="minLevel"		Value="0.2"/> <!-- 0.05 valor por defecto -->
+		<Parameter Name="kLevel"		Value="0.7" /> <!-- Con 0.4 funcionan todos menos calibración -->
+	</contourDetecion>
+	<compounding>
+		<Parameter Name="xLimit" Value="[-35, 35, 0.15]" /> <!-- Default: -90, 90, 0.15 -->
+		<Parameter Name="yLimit" Value="[-35, 35, 0.15]" />		
+	</compounding>
+	<velocityEstimation>
+		<Parameter Name="velocityRange"		Value="[1.41, 1.415, 0.005]" /> <!-- Default: 1.4 to 1.6 0.005-->
+		<Parameter Name="velocityDiffRange"	Value="[-0.008, 0.008, 0.004]" />
+		<Parameter Name="numberOfProcess"	Value="30"	/>
+		<Parameter Name="parallel"			Value="1"	/>
+		<Parameter Name="maskFactor"		Value="0.25"/>
+		<Parameter Name="xyStep"            Value="0.25"/>
+	</velocityEstimation>	
+</imageCompounding>
